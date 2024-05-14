@@ -1,0 +1,21 @@
+{
+  "name": "qrengine",
+  "version": "1.0.1",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "versionup": "npm --no-git-tag-version version patch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ctrl/magnet-link": "^4.0.2",
+    "jimp": "^0.22.12",
+    "jsqr": "^1.4.0",
+    "qrcode": "^1.5.3",
+    "vcf": "^2.1.2",
+    "yargs": "^17.7.2"
+  }
+}
