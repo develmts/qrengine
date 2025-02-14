@@ -1,21 +1,35 @@
 {
   "name": "qrengine",
-  "version": "1.0.1",
-  "description": "",
-  "main": "app.js",
+  "version": "1.0.2",
+  "description": "Command line QR Code Extractor and encoder",
+  "main": "qrengine.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/develmts/qrengine.git"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx tap app/specs",
+    "build": "npm run patchup && node ./scripts/updateVers.cjs ./version.json",
+    "patchup": "npm --no-git-tag-version version patch",
+    "minorup": "npm --no-git-tag-version version minor",
     "versionup": "npm --no-git-tag-version version patch"
   },
-  "author": "",
+  "author": "mts <develmts@github.com> https://github.com/develmts",
   "license": "ISC",
   "dependencies": {
     "@ctrl/magnet-link": "^4.0.2",
+    "isomorphic-fetch": "^3.0.0",
     "jimp": "^0.22.12",
     "jsqr": "^1.4.0",
+    "node-fetch": "^3.3.2",
     "qrcode": "^1.5.3",
     "vcf": "^2.1.2",
+    "whatwg-url": "^14.1.1",
     "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "chai": "^5.1.2",
+    "tap": "^21.0.2"
   }
 }
